@@ -1,6 +1,31 @@
-// ===============================
-// Base de datos de precios por m² en Lima (Agosto 2024)
-// ===============================
+const CLAVE_GLOBAL = "12345";
+
+// Elementos
+const gate = document.getElementById('gate');
+const app = document.getElementById('app');
+const gateMsg = document.getElementById('gateMsg');
+const btnLogin = document.getElementById('btnLogin');
+const logout = document.getElementById('logout');
+
+// Login
+btnLogin.onclick = () => {
+  const inputClave = document.getElementById('clave').value;
+  if (inputClave === CLAVE_GLOBAL) {
+    gate.style.display = 'none';
+    app.style.display = 'block';
+    gateMsg.textContent = "";
+  } else {
+    gateMsg.textContent = "Clave incorrecta 🚫";
+  }
+};
+
+// Logout
+logout.onclick = () => {
+  app.style.display = 'none';
+  gate.style.display = 'block';
+  document.getElementById('clave').value = "";
+};
+
 const DATA = {
   // === LIMA TOP (Distritos Premium) ===
   "San Isidro": {
@@ -982,3 +1007,4 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 });
+

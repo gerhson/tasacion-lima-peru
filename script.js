@@ -26,7 +26,7 @@ logout.onclick = () => {
   document.getElementById('clave').value = "";
 };
 
-const DATA = {
+const data = {
   // === LIMA TOP (Distritos Premium) ===
   "San Isidro": {
     type: ["Departamento", "Casa", "Terreno"],
@@ -1007,4 +1007,5 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 });
+
 
